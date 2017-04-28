@@ -1,30 +1,32 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 import About from './About';
 import Album from './Album';
+import Photo from './Photo'
 import Home from './Home';
 import './App.css';
 
 class App extends Component {
 
-  constructor () {
+  constructor() {
     super()
-    this.state = {
-
-    }
+    this.state = {}
   }
-
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <Router>
+        <div>
+          <div className="header">Photos</div>
+        <Route exact path="/" component={Home}/>
+        <Route path="/Album/:albumId" component={Album}/>
+        <Route path="/Photo/:photoId" component={Photo}/>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      </Router>
     );
   }
 }
