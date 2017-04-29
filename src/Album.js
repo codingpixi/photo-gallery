@@ -6,13 +6,27 @@ import {
 } from 'react-router-dom'
 
 const Album = ({match}) => (
-  <div>
+  <div className="container">
     <h2>{match.params.albumId}</h2>
 
-    <Link to="/Photo/1">Each Photo</Link>
+
+
+    <div className="row">
+      <div className="col s2 leftColumn" >
+        <Link to="/Photo/1">Each Photo</Link>
+        <ul className="nav">
+          <li>album 1</li>
+          <li>album 2</li>
+          <li>album 3</li>
+          <li>album 4</li>
+          <li>album 5</li>
+          <li>album 6</li>
+        </ul>
+      </div>
+
+    </div>
 
   </div>
-
 
 )
 export default Album

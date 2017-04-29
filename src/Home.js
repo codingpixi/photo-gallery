@@ -8,31 +8,30 @@ import {
 
 const Home = () => (
 
-      <div className="Start">
+  <div className="Start">
 
-        <div className="container">
+    <div className="container">
 
-          <div className="row">
+      <div className="row">
 
-            <div className="col s4">
-              <div className="card">
-                <div className="card-image">
-                  <img src="images/sample-1.jpg"/>
-                </div>
-                <div className="card-content">
-                  <p>Album 1</p>
-                </div>
-                <div className="card-action">
-                  <Link to="/Album/detra">Album link</Link>
-                </div>
-              </div>
+        <div className="col s4">
+          <div className="card">
+            <div className="card-image">
+              <img src="images/sample-1.jpg"/>
+            </div>
+            <div className="card-content">
+              <p>Album 1</p>
+            </div>
+            <div className="card-action">
+              <Link to="/Album/detra">Album link</Link>
             </div>
           </div>
-
         </div>
-
       </div>
-    )
 
+    </div>
+
+  </div>
+)
 
 export default Home

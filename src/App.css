@@ -23,9 +23,10 @@ h1 {
   margin-left: 0.5em;
 }
 
-nav ul {
+ul {
   padding: 0;
   list-style: none;
+  color: white;
 }
 
 img {
@@ -41,7 +42,10 @@ img {
   font-size: 6em;
 }
 
-
+.leftColumn {
+  background-color: #404040;
+  height: 250px;
+}
 
 
 
