@@ -5,26 +5,56 @@ import {
   Link
 } from 'react-router-dom'
 
-const Album = ({match}) => (
-  <div className="container">
-    <h2>{match.params.albumId}</h2>
+class Album extends Component {
+  render(){
+    return(
+      <div className="container">
+        <h2>{this.props.match.params.albumId}</h2>
 
-    <div className="row">
-      <div className="col s2 leftColumn" >
-        <Link to="/Photo/1">Each Photo</Link>
-        <ul className="nav">
-          <li>album 1</li>
-          <li>album 2</li>
-          <li>album 3</li>
-          <li>album 4</li>
-          <li>album 5</li>
-          <li>album 6</li>
-        </ul>
-      </div>
+        <div className="row">
+          <div className="col s2 leftColumn" >
+            <Link to="/Photo/1">Each Photo</Link>
+            <ul className="nav">
+              <li>albumTravel</li>
+              <li>album 2</li>
+              <li>album 3</li>
+              <li>album 4</li>
+              <li>album 5</li>
+              <li>album 6</li>
+            </ul>
+          </div>
 
-    </div>
+          <div>
 
-  </div>
+            <div className="row">
 
-)
+              <div className="col s4">
+                <div className="card">
+                  <div className="card-image">
+                    {console.log(this.props.albumSet[3].water)}
+                    {this.props.albumSet[0].travel.map(album => {
+                      return <img src={album.img} />
+                    })
+                  }
+                  </div>
+
+                  <div className="card-content">
+                  </div>
+                  <div className="card-action">
+                    <Link to="/Album/travel">Album link</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          </div>
+
+        </div>
+    )
+  }
+
+
+}
 export default Album

@@ -17,10 +17,9 @@ const Home = () => (
         <div className="col s4">
           <div className="card">
             <div className="card-image">
-              <img src="images/sample-1.jpg"/>
+              <img alt="" src="https://images.unsplash.com/photo-1490108661355-933af4ee68a1?dpr=2&auto=format&fit=crop&w=1500&h=987&q=80&cs=tinysrgb&crop=&bg="/>
             </div>
             <div className="card-content">
-              <p>Album 1</p>
             </div>
             <div className="card-action">
               <Link to="/Album/detra">Album link</Link>
