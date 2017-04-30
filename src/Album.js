@@ -9,8 +9,6 @@ const Album = ({match}) => (
   <div className="container">
     <h2>{match.params.albumId}</h2>
 
-
-
     <div className="row">
       <div className="col s2 leftColumn" >
         <Link to="/Photo/1">Each Photo</Link>

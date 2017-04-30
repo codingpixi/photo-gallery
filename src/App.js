@@ -10,6 +10,7 @@ import Photo from './Photo'
 import Home from './Home';
 import './App.css';
 
+// use this when including a constructor
 class App extends Component {
 
   constructor() {

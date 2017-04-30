@@ -5,7 +5,7 @@ import {
   Link
 } from 'react-router-dom'
 
-
+//shortcut when no constructor needed
 const Home = () => (
 
   <div className="Start">
