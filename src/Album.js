@@ -15,7 +15,7 @@ class Album extends Component {
           <div className="col s2 leftColumn" >
             <Link to="/Photo/1">Each Photo</Link>
             <ul className="nav">
-              <li>albumTravel</li>
+              <li>Travel</li>
               <li>album 2</li>
               <li>album 3</li>
               <li>album 4</li>
@@ -31,10 +31,11 @@ class Album extends Component {
               <div className="col s4">
                 <div className="card">
                   <div className="card-image">
-                    {console.log(this.props.albumSet[3].water)}
-                    {this.props.albumSet[0].travel.map(album => {
+                    {console.log(this.props.albumSet.filter() => travel)}
+                    {/* {console.log(this.props.albumSet[3].water)} */}
+                    {/* {this.props.albumSet[0].travel.map(album => {
                       return <img src={album.img} />
-                    })
+                    }) */}
                   }
                   </div>
 
