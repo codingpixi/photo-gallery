@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import albumArray from './data';
 import {
   BrowserRouter as Router,
   Route,
