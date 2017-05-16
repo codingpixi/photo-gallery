@@ -27,8 +27,8 @@ class App extends Component {
         <div>
           <div className="header">dw gallery</div>
         <Route exact path="/" component={Home}/>
-        <Route path="/Album/:albumId" render={(pickles) => <Album albumSet = {this.state.albumArray} {...pickles} />}/>
-        <Route path="/Photo/:photoId" component={Photo}/>
+        <Route exact path="/Album/:albumId" render={(pickles) => <Album albumSet = {this.state.albumArray} {...pickles} />}/>
+        <Route path="/Album/:albumId/Photo/:photoId" component={Photo}/>
         </div>
       </Router>
     );

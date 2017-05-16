@@ -6,11 +6,21 @@ import {
   Link
 } from 'react-router-dom'
 
+class Photo extends Component {
+  render() {
+    let albumId = parseInt(this.props.match.params.albumId);
+    let pic = parseInt(this.props.match.params.photoId);
+    let data = albumArray[albumId].album[pic];
+    console.log(data);
 
-const Photo = ({match}) => (
-  <div>
-    <h2>{match.params.photoId}</h2>
-  </div>
 
-)
- export default Photo
+    return (
+      <div>
+        <p>hello</p>
+        <img src={albumArray[albumId].album[pic].img} width="750px" />
+
+      </div>
+    )
+  }
+}
+ export default Photo;

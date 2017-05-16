@@ -9,11 +9,11 @@ import {
 
 class Album extends Component {
   render(){
-    let index = parseInt(this.props.match.params.albumId);
-    console.log(albumArray[index].album);
+    let albumId = parseInt(this.props.match.params.albumId);
+    console.log(albumArray[albumId].album);
     return(
       <div className="container">
-        <h2>{index}</h2>
+        {/* <h2>{index}</h2> */}
 
         <div className="row">
           <div className="col s2 leftColumn" >
@@ -30,10 +30,11 @@ class Album extends Component {
 
           <div>
             <div className="card-image">
-              {albumArray[index].album.map((photo, index) => {
+              {albumArray[albumId].album.map((photo, index) => {
                 return <Link
                   key={index}
-                  to={`/album/${index}`}><img src={photo.img} width="400px" /></Link>
+                  to={`/Album/${albumId}/Photo/${index}`}><img src={photo.img} width="400px" /></Link>
+                  console.log(albumArray);
                 })}
                 }
             </div>
