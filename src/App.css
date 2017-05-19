@@ -50,12 +50,18 @@ img {
 .container {
   display: flex;
   flex-wrap: wrap;
-  width: 1000px;
+  width: 1400px;
   align-items: flex-start | flex;
 }
 
+a {
+    display: block;
+}
 
-
+.main {
+display: flex;
+flex-wrap: wrap;
+}
 
 
 

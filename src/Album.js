@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import albumArray from './data';
 import {
-  Link
+  Link,
+  NavLink
 } from 'react-router-dom'
-
 
 
 
@@ -16,19 +16,8 @@ class Album extends Component {
         {/* <h2>{index}</h2> */}
 
         <div className="row">
-          <div className="col s2 leftColumn" >
-            <Link to="/Photo/1">Each Photo</Link>
-            <ul className="nav">
-              <li>Travel</li>
-              <li>album 2</li>
-              <li>album 3</li>
-              <li>album 4</li>
-              <li>album 5</li>
-              <li>album 6</li>
-            </ul>
-          </div>
 
-          <div>
+          <div className="col s9 push-s3">
             <div className="card-image">
               {albumArray[albumId].album.map((photo, index) => {
                 return <Link
@@ -41,9 +30,25 @@ class Album extends Component {
 
             {/* <div className="card-content">
                 </div> */}
-            <div className="card-action">
+            {/* <div className="card-action">
             <Link to="/Album/travel">Album link</Link>
-            </div>
+            </div> */}
+          </div>
+
+          <div className="col s3 pull-s9" >
+            {/* <Link to="/Photo/1">Each Photo</Link> */}
+            <NavLink exact to="/">Home</NavLink>
+            <NavLink to="/Album/0"
+              activeClassName="selected">Trees
+            </NavLink>
+            <NavLink
+              to="/Album/1">Cameras
+              </NavLink>
+            <NavLink
+              to="/Album/2">Travel
+            </NavLink>
+            <NavLink to="/Album/3">Birds
+          </NavLink>
           </div>
         </div>
       </div>

@@ -9,6 +9,7 @@ import About from './About';
 import Album from './Album';
 import Photo from './Photo';
 import Home from './Home';
+import Navigation from './Navigation';
 import './App.css';
 
 // use this when including a constructor

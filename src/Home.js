@@ -13,13 +13,13 @@ const Home = () => (
       {albumArray.map((album, index) => {
         return <Link
           key={index}
-          to={`/album/${index}`}><img src={album.path} width="400px" /></Link>
+          to={`/album/${index}`}><img src={album.path} width="600px" /></Link>
         })}
     </div>
-            <div className="card-action">
-              <Link to="/Album/detra">Album link</Link>
-            </div>
-          </div>
+        {/* <div className="card-action">
+          <Link to="/Album/detra">Album link</Link>
+        </div> */}
+  </div>
 )
 
 export default Home
