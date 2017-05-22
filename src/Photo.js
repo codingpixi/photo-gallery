@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import albumArray from './data';
 import {
-  BrowserRouter as Router,
-  Route,
   Link
-} from 'react-router-dom'
+} from 'react-router-dom';
+import { browserHistory } from 'react-router';
+
+
 
 class Photo extends Component {
   render() {
@@ -16,6 +17,9 @@ class Photo extends Component {
 
     return (
       <div>
+        <Link to={`/Album/${albumId}`}>Back</Link>
+        {/* <Link to="{browserHistory.goBack}">Back
+        </Link> */}
         <p>hello</p>
         <img src={albumArray[albumId].album[pic].img} width="750px" />
 

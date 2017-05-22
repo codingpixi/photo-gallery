@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import albumArray from './data';
 import {
   Link
-} from 'react-router-dom'
+} from 'react-router-dom';
+import { browserHistory } from 'react-router';
 
 //shortcut when no constructor needed
 const Home = () => (

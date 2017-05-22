@@ -3,7 +3,8 @@ import albumArray from './data';
 import {
   Link,
   NavLink
-} from 'react-router-dom'
+} from 'react-router-dom';
+import { browserHistory } from 'react-router';
 
 
 
@@ -16,26 +17,7 @@ class Album extends Component {
         {/* <h2>{index}</h2> */}
 
         <div className="row">
-
-          <div className="col s9 push-s3">
-            <div className="card-image">
-              {albumArray[albumId].album.map((photo, index) => {
-                return <Link
-                  key={index}
-                  to={`/Album/${albumId}/Photo/${index}`}><img src={photo.img} width="400px" /></Link>
-                  console.log(albumArray);
-                })}
-                }
-            </div>
-
-            {/* <div className="card-content">
-                </div> */}
-            {/* <div className="card-action">
-            <Link to="/Album/travel">Album link</Link>
-            </div> */}
-          </div>
-
-          <div className="col s3 pull-s9" >
+          <div className="col s12 m4 l3" >
             {/* <Link to="/Photo/1">Each Photo</Link> */}
             <NavLink exact to="/">Home</NavLink>
             <NavLink to="/Album/0"
@@ -50,6 +32,29 @@ class Album extends Component {
             <NavLink to="/Album/3">Birds
           </NavLink>
           </div>
+
+          <div className="col s12 m8 l9">
+            <div className = "row">
+              <div className = "col s12 m8 l9">
+                <div className="card-image">
+                  {albumArray[albumId].album.map((photo, index) => {
+                    return <Link
+                      key={index}
+                      to={`/Album/${albumId}/Photo/${index}`}><img src={photo.img} width="400px" /></Link>
+                      console.log(albumArray);
+                    })}
+                    }
+                </div>
+              </div>
+            </div>
+            {/* <div className="card-content">
+                </div> */}
+            {/* <div className="card-action">
+            <Link to="/Album/travel">Album link</Link>
+            </div> */}
+          </div>
+
+
         </div>
       </div>
     )
